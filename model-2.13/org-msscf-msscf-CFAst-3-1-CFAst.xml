@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ *	MSS Code Factory 3.1 CFAst - Asterisk Configuration Repository
+ *
+ *	Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+ *
+ *	MSS Code Factory Asterisk Configuration Repository is distributed under
+ *	Mark Stephen Sobkow's Proprietary Share License, Version 1.0.
+ *
+ *	MSS Code Factory Asterisk Configuration Repository is proprietary code and
+ *	is only available for production and distribution builds and environments
+ *	with a commercial license from Mark Stephen Sobkow.
+ *
+ *	MSS Code Factory Asterisk Configuration Repository is published so that
+ *	you may study it for academic purposes or to perform security verification
+ *	reviews, but you may not deploy the code on more than one server, nor for any
+ *	purpose other than testing and evaluation to determine whether you
+ *	wish to purchase a commercial license.  Registered .edu educational
+ *	institutions are permitted to install, deploy, modify, and extend
+ *	this code for research and educational purposes only, but must
+ *	obtain normal commercial licenses for non-research or
+ *	coursework use.
+ *
+ *	Any use of MSS Code Factory Asterisk Configuration Repository in a
+ *	production environment without a commercial license from Mark Stephen Sobkow
+ *	is strictly forbidden.
+ *
+ *	MSS Code Factory Repository is distributed in the hope that it will be useful,
+ *	but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ *	or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ *	Donations to support MSS Code Factory Asterisk Configuration Repository can be
+ *	made at https://www.paypal.com/paypalme2/MarkSobkow
+ *
+ *	Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.
+ *-->
+<MSSBam
+		xmlns="uri://org.msscf/msscf/2.0.13/mssbam"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xsi:schemaLocation="uri://org.msscf/msscf/2.0.13/mssbam file:/opt/msscf/2.0.13/xsd/mssbam-2.13.xsd"
+		Name="CFAst"
+		Revision="3.1"
+		Description="MSS Code Factory CFAst - Asterisk Configuration Repository"
+		ProjectRoot="com.github.msobkow.CFAst.3.1" >
+	<Tld Name="com" >
+		<TopDomain Name="github" >
+			<TopProject Name="msobkow" >
+				<SubProject Name="CFAst" >
+					<MajorVersion Name="3" >
+						<MinorVersion Name="1" >
+<SchemaDef Name="CFAst"
+		DbName="CFAst31"
+		Description="Code Factory Asterisk Configuration Repository"
+		CopyrightHolder="Mark Stephen Sobkow"
+		CopyrightPeriod="2020"
+		AuthorEMail="msobkow@sasktel.net"
+		ProjectURL="http://msobkow.github.com/"
+		PublishURI="https://msscf.sourceforge.io/com-github-msobkow-CFAst-3-1-CFAst.xml"
+		CommonLicenseName="Mark Stephen Sobkow's Proprietary Share License, Version 1.0" CommonLicenseCode="MSSProp10" >
+			<CommonLicense>
+MSS Code Factory 3.1 CFAst - Asterisk Configuration Repository
+
+Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+
+MSS Code Factory Asterisk Configuration Repository is distributed under
+Mark Stephen Sobkow's Proprietary Share License, Version 1.0.
+
+MSS Code Factory Asterisk Configuration Repository is proprietary code and
+is only available for production and distribution builds and environments
+with a commercial license from Mark Stephen Sobkow.
+
+MSS Code Factory Asterisk Configuration Repository is published so that
+you may study it for academic purposes or to perform security verification
+reviews, but you may not deploy the code on more than one server, nor for any
+purpose other than testing and evaluation to determine whether you
+wish to purchase a commercial license.  Registered .edu educational
+institutions are permitted to install, deploy, modify, and extend
+this code for research and educational purposes only, but must
+obtain normal commercial licenses for non-research or
+coursework use.
+
+Any use of MSS Code Factory Asterisk Configuration Repository in a
+production environment without a commercial license from Mark Stephen Sobkow
+is strictly forbidden.
+
+MSS Code Factory Repository is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.
+
+Donations to support MSS Code Factory Asterisk Configuration Repository can be
+made at https://www.paypal.com/paypalme2/MarkSobkow
+
+Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</CommonLicense>
+
+	<SchemaRef Name="CFSec"
+			RefModelName="com-github-msobkow-CFSec-3-1-CFSec"
+			IncludeRoot="com.github.msobkow.CFSec.3.1.CFSec" />
+
+	<SchemaRef Name="CFInt"
+			RefModelName="com-github-msobkow-CFInt-3-1-CFInt"
+			IncludeRoot="com.github.msobkow.CFInt.3.1.CFInt" />
+
+	<Id64Gen Name="ConfigurationFileIdGen"
+			IsNullable="false"
+			DbName="conf_file_idgen"
+			MinValue="0"
+			InitValue="0"
+			Dispenser="Cluster"
+			Slice="3000"
+			BlockSize="1" />
+
+	<Table Name="ConfigurationFile"
+			TableClassCode="a301"
+			DbName="conf_file"
+			Label="Configuration File"
+			Description="A configuration file appearing on the file system"
+			IsInstantiable="false"
+			HasHistory="true"
+			HasAuditColumns="true"
+			LookupIndex="ConfigurationFileNameIdx"
+			LoaderBehaviour="Update"
+			SecScope="Cluster" >
+		<TableCol Name="ClusterId"
+				Label="Cluster Id"
+				IsNullable="false"
+				DataType="ClusterIdGen" />
+		<TableCol Name="Id"
+				IsNullable="false"
+				GenerateId="true"
+				DataType="ConfigurationFileIdGen" />
+		<TableCol Name="HostNodeId"
+				Label="Host Node Id"
+				IsNullable="false"
+				DataType="HostNodeIdGen" />
+		<StringCol Name="FileFullName"
+				IsNullable="false"
+				DbName="f_fullname"
+				MaxLen="512"
+				InitValue="" />
+		<PrimaryIndex Name="ConfigurationFileIdIdx"
+				IsDbMapped="true"
+				IsUnique="true"
+				DbName="conf_file_pk"
+				ShortName="PIdx"
+				Suffix="IdIdx"
+				Label="Configuration File Primary Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="Id" IsAscending="true" />
+		</PrimaryIndex>
+		<Index Name="ConfigurationFileClusterIdx"
+				IsDbMapped="true"
+				IsUnique="false"
+				DbName="conf_file_xclus"
+				ShortName="ConfFileClusIdx"
+				Suffix="ClusterIdx"
+				Label="Cluster Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+		</Index>
+		<Index Name="ConfigurationFileHostNodeIdx"
+				IsDbMapped="true"
+				IsUnique="false"
+				DbName="conf_file_xhost"
+				ShortName="ConfFileHostIdx"
+				Suffix="HostIdx"
+				Label="Host Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="HostNodeId" IsAscending="true" />
+		</Index>
+		<Index Name="ConfigurationFileNameIdx"
+				IsDbMapped="true"
+				IsUnique="true"
+				DbName="conf_file_xuname"
+				ShortName="UNameIdx"
+				Suffix="UNameIdx"
+				Label="Unique Name Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="HostNodeId" IsAscending="true" />
+			<IndexCol Name="FileFullName" IsAscending="true" />
+		</Index>
+	</Table>
+
+	<Table Name="ExtConfigConf"
+			TableClassCode="a302"
+			DbName="extcnf_conf"
+			Label="Asterisk extconfig.conf"
+			Description="Asterisk extconfig.conf file"
+			IsInstantiable="true"
+			HasHistory="true"
+			HasAuditColumns="true"
+			LoaderBehaviour="Update"
+			SecScope="Cluster" >
+		<TableCol Name="ClusterId"
+				Label="Cluster Id"
+				IsNullable="false"
+				DataType="ClusterIdGen" />
+		<TableCol Name="Id"
+				IsNullable="false"
+				DataType="ConfigurationFileIdGen" />
+		<TextCol Name="FileContents"
+				IsNullable="false"
+				MaxLen="2000000"
+				InitValue="" />
+		<PrimaryIndex Name="ExtConfigConfIdIdx"
+				IsDbMapped="true"
+				IsUnique="true"
+				DbName="extconfig_pk"
+				ShortName="PIdx"
+				Suffix="IdIdx"
+				Label="Configuration File Primary Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="Id" IsAscending="true" />
+		</PrimaryIndex>
+		<Index Name="ExtConfigConfClusterIdx"
+				IsDbMapped="true"
+				IsUnique="false"
+				DbName="extconfig_xclus"
+				ShortName="ConfClusIdx"
+				Suffix="ExtCnfClusIdx"
+				Label="Cluster Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+		</Index>
+		<SuperClassRelation Name="SuperClass"
+				DbName="extconfig_super"
+				Label="SuperClass"
+				Suffix="SuperClass"
+				FromIndex="ExtConfigConfIdIdx"
+				ToIndex="ConfigurationFile.ConfigurationFileIdIdx" >
+			<RelationCol Name="ClusterId" ToCol="ClusterId" />
+			<RelationCol Name="Id" ToCol="Id" />
+		</SuperClassRelation>
+	</Table>
+
+	<Table Name="ExtensionsConf"
+			TableClassCode="a303"
+			DbName="ext_conf"
+			Label="Asterisk extensions.conf"
+			Description="Asterisk extensions.conf file"
+			IsInstantiable="true"
+			HasHistory="true"
+			HasAuditColumns="true"
+			LoaderBehaviour="Update"
+			SecScope="Cluster" >
+		<TableCol Name="ClusterId"
+				Label="Cluster Id"
+				IsNullable="false"
+				DataType="ClusterIdGen" />
+		<TableCol Name="Id"
+				IsNullable="false"
+				DataType="ConfigurationFileIdGen" />
+		<TextCol Name="FileContents"
+				IsNullable="false"
+				MaxLen="2000000"
+				InitValue="" />
+		<PrimaryIndex Name="ExtensionsConfIdIdx"
+				IsDbMapped="true"
+				IsUnique="true"
+				DbName="extensionsconf_pk"
+				ShortName="PIdx"
+				Suffix="IdIdx"
+				Label="Configuration File Primary Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="Id" IsAscending="true" />
+		</PrimaryIndex>
+		<Index Name="ExtensionsConfClusterIdx"
+				IsDbMapped="true"
+				IsUnique="false"
+				DbName="extensionsconf_xclus"
+				ShortName="ConfClusIdx"
+				Suffix="ExtClusterIdx"
+				Label="Cluster Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+		</Index>
+		<SuperClassRelation Name="SuperClass"
+				DbName="extensionsconf_super"
+				Label="SuperClass"
+				Suffix="SuperClass"
+				FromIndex="ExtensionsConfIdIdx"
+				ToIndex="ConfigurationFile.ConfigurationFileIdIdx" >
+			<RelationCol Name="ClusterId" ToCol="ClusterId" />
+			<RelationCol Name="Id" ToCol="Id" />
+		</SuperClassRelation>
+	</Table>
+
+	<Table Name="SipConf"
+			TableClassCode="a304"
+			DbName="sip_conf"
+			Label="Asterisk sip.conf"
+			Description="Asterisk sip.conf file"
+			IsInstantiable="true"
+			HasHistory="true"
+			HasAuditColumns="true"
+			LoaderBehaviour="Update"
+			SecScope="Cluster" >
+		<TableCol Name="ClusterId"
+				Label="Cluster Id"
+				IsNullable="false"
+				DataType="ClusterIdGen" />
+		<TableCol Name="Id"
+				IsNullable="false"
+				DataType="ConfigurationFileIdGen" />
+		<TextCol Name="FileContents"
+				IsNullable="false"
+				MaxLen="2000000"
+				InitValue="" />
+		<PrimaryIndex Name="SipConfIdIdx"
+				IsDbMapped="true"
+				IsUnique="true"
+				DbName="sipconf_pk"
+				ShortName="PIdx"
+				Suffix="IdIdx"
+				Label="Configuration File Primary Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="Id" IsAscending="true" />
+		</PrimaryIndex>
+		<Index Name="SipConfClusterIdx"
+				IsDbMapped="true"
+				IsUnique="false"
+				DbName="sipconf_xclus"
+				ShortName="ConfClusIdx"
+				Suffix="SipClusterIdx"
+				Label="Cluster Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+		</Index>
+		<SuperClassRelation Name="SuperClass"
+				DbName="sipconf_super"
+				Label="SuperClass"
+				Suffix="SuperClass"
+				FromIndex="SipConfIdIdx"
+				ToIndex="ConfigurationFile.ConfigurationFileIdIdx" >
+			<RelationCol Name="ClusterId" ToCol="ClusterId" />
+			<RelationCol Name="Id" ToCol="Id" />
+		</SuperClassRelation>
+	</Table>
+
+	<Table Name="VoicemailConf"
+			TableClassCode="a305"
+			DbName="vm_conf"
+			Label="Asterisk voicemail.conf"
+			Description="Asterisk voicemail.conf file"
+			IsInstantiable="true"
+			HasHistory="true"
+			HasAuditColumns="true"
+			LoaderBehaviour="Update"
+			SecScope="Cluster" >
+		<TableCol Name="ClusterId"
+				Label="Cluster Id"
+				IsNullable="false"
+				DataType="ClusterIdGen" />
+		<TableCol Name="Id"
+				IsNullable="false"
+				DataType="ConfigurationFileIdGen" />
+		<TextCol Name="FileContents"
+				IsNullable="false"
+				MaxLen="2000000"
+				InitValue="" />
+		<PrimaryIndex Name="VoicemailConfIdIdx"
+				IsDbMapped="true"
+				IsUnique="true"
+				DbName="voicemailconf_pk"
+				ShortName="PIdx"
+				Suffix="IdIdx"
+				Label="Configuration File Primary Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="Id" IsAscending="true" />
+		</PrimaryIndex>
+		<Index Name="VoicemailConfClusterIdx"
+				IsDbMapped="true"
+				IsUnique="false"
+				DbName="voicemailconf_xclus"
+				ShortName="ConfClusIdx"
+				Suffix="VMClusterIdx"
+				Label="Cluster Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+		</Index>
+		<SuperClassRelation Name="SuperClass"
+				DbName="voicemailconf_super"
+				Label="SuperClass"
+				Suffix="SuperClass"
+				FromIndex="VoicemailConfIdIdx"
+				ToIndex="ConfigurationFile.ConfigurationFileIdIdx" >
+			<RelationCol Name="ClusterId" ToCol="ClusterId" />
+			<RelationCol Name="Id" ToCol="Id" />
+		</SuperClassRelation>
+	</Table>
+
+	<Table Name="AsteriskConf"
+			TableClassCode="a306"
+			DbName="ast_conf"
+			Label="Asterisk asterisk.conf"
+			Description="Asterisk asterisk.conf file"
+			IsInstantiable="true"
+			HasHistory="true"
+			HasAuditColumns="true"
+			LoaderBehaviour="Update"
+			SecScope="Cluster" >
+		<TableCol Name="ClusterId"
+				Label="Cluster Id"
+				IsNullable="false"
+				DataType="ClusterIdGen" />
+		<TableCol Name="Id"
+				IsNullable="false"
+				DataType="ConfigurationFileIdGen" />
+		<TextCol Name="FileContents"
+				IsNullable="false"
+				MaxLen="2000000"
+				InitValue="" />
+		<PrimaryIndex Name="AsteriskConfIdIdx"
+				IsDbMapped="true"
+				IsUnique="true"
+				DbName="asteriskconf_pk"
+				ShortName="PIdx"
+				Suffix="IdIdx"
+				Label="Configuration File Primary Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+			<IndexCol Name="Id" IsAscending="true" />
+		</PrimaryIndex>
+		<Index Name="AsteriskConfClusterIdx"
+				IsDbMapped="true"
+				IsUnique="false"
+				DbName="asteriskconf_xclus"
+				ShortName="ConfClusIdx"
+				Suffix="ConfClusterIdx"
+				Label="Cluster Index" >
+			<IndexCol Name="ClusterId" IsAscending="true" />
+		</Index>
+		<SuperClassRelation Name="SuperClass"
+				DbName="asteriskconf_super"
+				Label="SuperClass"
+				Suffix="SuperClass"
+				FromIndex="AsteriskConfIdIdx"
+				ToIndex="ConfigurationFile.ConfigurationFileIdIdx" >
+			<RelationCol Name="ClusterId" ToCol="ClusterId" />
+			<RelationCol Name="Id" ToCol="Id" />
+		</SuperClassRelation>
+	</Table>
+
+	<TableAddendum FromTable="ConfigurationFile">
+		<Relation Name="Cluster"
+				RelationType="Owner"
+				DbName="conffile_cluster"
+				Label="Cluster"
+				Suffix="Cluster"
+				FromIndex="ConfigurationFileClusterIdx"
+				ToIndex="Cluster.ClusterIdIdx"
+				IsRequired="true" >
+			<RelationCol Name="ClusterId" ToCol="Id" />
+		</Relation>
+		<Relation Name="HostNode"
+				RelationType="Parent"
+				DbName="conffile_hostnode"
+				Label="Host Node"
+				Suffix="HostNode"
+				FromIndex="ConfigurationFileHostNodeIdx"
+				ToIndex="HostNode.HostNodeIdIdx"
+				IsRequired="true"
+				IsXsdContainer="true" >
+			<RelationCol Name="ClusterId" ToCol="ClusterId" />
+			<RelationCol Name="HostNodeId" ToCol="HostNodeId" />
+		</Relation>
+	</TableAddendum>
+
+	<TableAddendum FromTable="HostNode">
+		<Relation Name="ConfigurationFile"
+				RelationType="Children"
+				DbName="hostnode_conffile"
+				Label="Configuration File"
+				Suffix="ConfFile"
+				FromIndex="HostNodeIdIdx"
+				ToIndex="ConfigurationFile.ConfigurationFileHostNodeIdx"
+				IsRequired="false"
+				IsXsdContainer="true" >
+			<RelationCol Name="ClusterId" ToCol="ClusterId" />
+			<RelationCol Name="HostNodeId" ToCol="HostNodeId" />
+		</Relation>
+	</TableAddendum>
+
+	<TableAddendum FromTable="HostNode">
+		<DelDep Name="DelConfigurationFiles" DelDepChain="ConfigurationFile" />
+	</TableAddendum>
+</SchemaDef>
+						</MinorVersion>
+					</MajorVersion>
+				</SubProject>
+			</TopProject>
+		</TopDomain>
+	</Tld>
+</MSSBam>
