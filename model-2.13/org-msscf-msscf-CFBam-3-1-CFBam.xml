@@ -2,7 +2,7 @@
 <!--
  *	MSS Code Factory 3.1 CFBam - Business Application Model
  *
- *	Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+ *	Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
  *
  *	MSS Code Factory Business Application Model is distributed under
  *	Mark Stephen Sobkow's Proprietary BAM License, Version 1.0.
@@ -43,7 +43,7 @@
  *	Donations to support MSS Code Factory Business Application Model
  *	can be made at https://www.paypal.com/paypalme2/MarkSobkow
  *
- *	Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.
+ *	Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.
  *-->
 <MSSBam
 		xmlns="uri://org.msscf/msscf/2.0.13/mssbam"
@@ -65,7 +65,7 @@
 		Description="Code Factory Business Application Model"
 		CopyrightHolder="Mark Stephen Sobkow"
 		CopyrightPeriod="2020"
-		AuthorEMail="msobkow@sasktel.net"
+		AuthorEMail="mark.sobkow@gmail.com"
 		ProjectURL="http://msobkow.github.com/"
 		PublishURI="https://msscf.sourceforge.io/com-github-msobkow-CFBam-3-1-CFBam.xml"
 		CommonLicenseName="Mark Stephen Sobkow's Proprietary BAM Server , Version 1.0" CommonLicenseCode="MSSBam10" >
@@ -76,7 +76,7 @@
 			<CommonLicense>
 MSS Code Factory 3.1 CFBam - Business Application Model
 
-Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
 
 MSS Code Factory Business Application Model is distributed under
 Mark Stephen Sobkow's Proprietary BAM License, Version 1.0.
@@ -117,12 +117,12 @@ PARTICULAR PURPOSE.
 Donations to support MSS Code Factory Business Application Model
 can be made at https://www.paypal.com/paypalme2/MarkSobkow
 
-Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</CommonLicense>
+Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.</CommonLicense>
 
 			<ClientXFaceLicense>
 MSS Code Factory 3.1 CFBam - Business Application Model Client
 
-Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
 
 MSS Code Factory Business Application Model Client is distributed
 under Mark Stephen Sobkow's Proprietary BAM Client License, Version 1.0.
@@ -166,12 +166,12 @@ FOR A PARTICULAR PURPOSE.
 Donations to support MSS Code Factory Business Application Model
 Client can be made at https://www.paypal.com/paypalme2/MarkSobkow
 
-Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</ClientXFaceLicense>
+Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.</ClientXFaceLicense>
 
 			<ClientImplLicense>
 MSS Code Factory 3.1 CFBam - Business Application Model Client
 
-Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
 
 MSS Code Factory Business Application Model Client is distributed
 under Mark Stephen Sobkow's Proprietary BAM Client License, Version 1.0.
@@ -215,12 +215,12 @@ FOR A PARTICULAR PURPOSE.
 Donations to support MSS Code Factory Business Application Model
 Client can be made at https://www.paypal.com/paypalme2/MarkSobkow
 
-Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</ClientImplLicense>
+Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.</ClientImplLicense>
 
 			<ServerXFaceLicense>
 MSS Code Factory 3.1 CFBam - Business Application Model Server Interface
 
-Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
 
 MSS Code Factory Business Application Model Server Interface
 is distributed under Mark Stephen Sobkow's Proprietary BAM Server
@@ -263,12 +263,12 @@ Donations to support MSS Code Factory Business Application Model
 Server Interface can be made at
 https://www.paypal.com/paypalme2/MarkSobkow
 
-Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</ServerXFaceLicense>
+Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.</ServerXFaceLicense>
 
 			<ServerImplLicense>
 MSS Code Factory 3.1 CFBam - Business Application Model Server Implementation
 
-Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
 
 MSS Code Factory Business Application Model Server Implementation
 is distributed under Mark Stephen Sobkow's Proprietary BAM Server
@@ -311,7 +311,7 @@ Donations to support MSS Code Factory Business Application Model
 Server Implementation can be made at
 https://www.paypal.com/paypalme2/MarkSobkow
 
-Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</ServerImplLicense>
+Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.</ServerImplLicense>
 
 	<SchemaRef Name="CFSec"
 			RefModelName="com-github-msobkow-CFSec-3-1-CFSec"

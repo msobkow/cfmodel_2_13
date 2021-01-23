@@ -2,7 +2,7 @@
 <!--
  *	MSS Code Factory 3.1 CFCore - Code Factory Core
  *
- *	Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+ *	Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
  *
  *	MSS Code Factory Code Factory Core is distributed under
  *	Mark Stephen Sobkow's Proprietary Core License, Version 1.0.
@@ -43,7 +43,7 @@
  *	Donations to support MSS Code Factory Code Factory Core
  *	can be made at https://www.paypal.com/paypalme2/MarkSobkow
  *
- *	Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.
+ *	Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.
  *-->
 <MSSBam
 		xmlns="uri://org.msscf/msscf/2.0.13/mssbam"
@@ -65,14 +65,14 @@
 		Description="Code Factory Core"
 		CopyrightHolder="Mark Stephen Sobkow"
 		CopyrightPeriod="2020"
-		AuthorEMail="msobkow@sasktel.net"
+		AuthorEMail="mark.sobkow@gmail.com"
 		ProjectURL="http://msobkow.github.com/"
 		PublishURI="https://msscf.sourceforge.io/com-github-msobkow-CFCore-3-1-CFGenKb.xml"
 		CommonLicenseName="Mark Stephen Sobkow's Proprietary Core License, Version 1.0" CommonLicenseCode="MSSCore10" >
 			<CommonLicense>
 MSS Code Factory 3.1 CFCore - Code Factory Core
 
-Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
 
 MSS Code Factory Code Factory Core is distributed under
 Mark Stephen Sobkow's Proprietary Core License, Version 1.0.
@@ -113,7 +113,7 @@ PARTICULAR PURPOSE.
 Donations to support MSS Code Factory Code Factory Core
 can be made at https://www.paypal.com/paypalme2/MarkSobkow
 
-Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</CommonLicense>
+Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.</CommonLicense>
 
 	<EnumType Name="AuditActionEnum"
 			IsNullable="false"

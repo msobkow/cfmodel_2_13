@@ -2,7 +2,7 @@
 <!--
  *	MSS Code Factory 3.1 CFAcc - Accounting
  *
- *	Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+ *	Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
  *
  *	MSS Code Factory Accounting is distributed under Mark Stephen
  *	Sobkow's Proprietary Share License, Version 1.0.
@@ -31,7 +31,7 @@
  *	Donations to support MSS Code Factory Accounting can be made at
  *	https://www.paypal.com/paypalme2/MarkSobkow
  *
- *	Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.
+ *	Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.
  *-->
 <MSSBam
 		xmlns="uri://org.msscf/msscf/2.0.13/mssbam"
@@ -53,14 +53,14 @@
 		Description="Code Factory Accounting"
 		CopyrightHolder="Mark Stephen Sobkow"
 		CopyrightPeriod="2020"
-		AuthorEMail="msobkow@sasktel.net"
+		AuthorEMail="mark.sobkow@gmail.com"
 		ProjectURL="http://msobkow.github.com/"
 		PublishURI="https://msscf.sourceforge.io/com-github-msobkow-CFAcc-3-1-CFAcc.xml"
 		CommonLicenseName="Mark Stephen Sobkow's Proprietary Share License, Version 1.0" CommonLicenseCode="MSSProp10" >
 			<CommonLicense>
 MSS Code Factory 3.1 CFAcc - Accounting
 
-Copyright (c) 2020 Mark Stephen Sobkow (msobkow@sasktel.net)
+Copyright (c) 2020 Mark Stephen Sobkow (mark.sobkow@gmail.com)
 
 MSS Code Factory Accounting is distributed under Mark Stephen
 Sobkow's Proprietary Share License, Version 1.0.
@@ -89,7 +89,7 @@ or FITNESS FOR A PARTICULAR PURPOSE.
 Donations to support MSS Code Factory Accounting can be made at
 https://www.paypal.com/paypalme2/MarkSobkow
 
-Please contact Mark Stephen Sobkow at msobkow@sasktel.net for commercial licensing.</CommonLicense>
+Please contact Mark Stephen Sobkow at mark.sobkow@gmail.com for commercial licensing.</CommonLicense>
 
 	<SchemaRef Name="CFSec"
 			RefModelName="com-github-msobkow-CFSec-3-1-CFSec"
